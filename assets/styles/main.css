@@ -1,3 +1,7 @@
+/* -----------------------------------------------------------------------------
+ * Global Styles
+ * ---------------------------------------------------------------------------*/
+
 /* Reset some basic elements */
 * {
     margin: 0;
@@ -14,7 +18,10 @@ body {
     overflow-x: hidden;
 }
 
-/* Header Styles */
+/* -----------------------------------------------------------------------------
+ * Header Styles
+ * ---------------------------------------------------------------------------*/
+
 header {
     background: linear-gradient(135deg, #457b9d, #1d3557);
     padding: 10px 20px;
@@ -71,17 +78,23 @@ header p {
     margin: 10px auto;
 }
 
-/* Main Content Styles */
+/* -----------------------------------------------------------------------------
+ * Main Content Styles
+ * ---------------------------------------------------------------------------*/
+
 main {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Section Styles */
+/* -----------------------------------------------------------------------------
+ * Section Styles
+ * ---------------------------------------------------------------------------*/
+
 section {
     background: linear-gradient(135deg, #fff, #f4f4f4);
-    padding: 30px 20px;
+    padding: 30px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -104,7 +117,10 @@ section p, section ul {
     color: #666;
 }
 
-/* Projects Section Styles */
+/* -----------------------------------------------------------------------------
+ * Projects Section Styles
+ * ---------------------------------------------------------------------------*/
+
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -123,7 +139,6 @@ section p, section ul {
     background: #f1faee;
     color: #1d3557;
     transform: scale(1.05);
-
 }
 
 .project-card h3 {
@@ -135,10 +150,13 @@ section p, section ul {
     color: #666;
 }
 
-/* Footer Styles */
+/* -----------------------------------------------------------------------------
+ * Footer Styles
+ * ---------------------------------------------------------------------------*/
+
 footer {
     background: linear-gradient(135deg, #1d3557, #457b9d);
-    padding: 30px 20px;
+    padding: 30px;
     color: #fff;
     text-align: center;
     border-radius: 8px;
@@ -170,7 +188,10 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* -----------------------------------------------------------------------------
+ * Responsive Design
+ * ---------------------------------------------------------------------------*/
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
