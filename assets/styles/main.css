@@ -7,7 +7,7 @@
 
 /* Body Styles */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
     background-color: #f4f4f4;
     line-height: 1.6;
@@ -80,7 +80,7 @@ main {
 
 /* Section Styles */
 section {
-    background: #fff;
+    background: linear-gradient(135deg, #fff, #f4f4f4);
     padding: 30px 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -120,8 +120,10 @@ section p, section ul {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: #f1faee;
+    color: #1d3557;
+    transform: scale(1.05);
+
 }
 
 .project-card h3 {
