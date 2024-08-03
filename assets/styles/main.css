@@ -114,7 +114,6 @@ section {
     border-radius: 8px;
     transition: transform 0.5s, box-shadow 0.3s;
     scroll-margin-top: 100px;
-    min-height: 300px;
 }
 
 /* Make sure that sections are visible */
