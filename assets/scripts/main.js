@@ -21,8 +21,24 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     })
   })
-})
 
+  // Scroll to the correct position when the page loads or reloads
+  const currentHash = window.location.hash
+  if (currentHash) {
+    const targetElement = document.querySelector(currentHash)
+    if (targetElement) {
+      const headerOffset = document.querySelector('header').offsetHeight
+      const elementPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY
+      const offsetPosition = elementPosition - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
+  }
+})
 
 // Intersection Observer for animations
 const observer = new IntersectionObserver(entries => {
