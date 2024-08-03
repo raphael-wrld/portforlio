@@ -178,10 +178,7 @@ section p, section ul {
     color: #666;
 }
 
-/* -----------------------------------------------------------------------------
- * Footer Styles
- * ---------------------------------------------------------------------------*/
-
+/* Footer Styles */
 footer {
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     padding: 30px;
@@ -198,13 +195,21 @@ footer h3 {
     padding-bottom: 5px;
 }
 
-footer ul {
+footer .contact-info {
     list-style: none;
     padding: 0;
+    margin-bottom: 20px;
 }
 
-footer li {
+footer .contact-info li {
     margin-bottom: 10px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+footer .contact-info li i {
+    margin-right: 10px;
 }
 
 footer a {
