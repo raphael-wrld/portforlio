@@ -5,6 +5,11 @@
     <!-- Meta tags for responsive design and character encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags for SEO -->
+    <meta name="description"
+        content="Raphael Mugwedeza's personal portfolio showcasing projects and skills as an aspiring software developer and programmer.">
+    <meta name="keywords" content="Raphael Mugwedeza, portfolio, software developer, programmer, projects">
+    <meta name="author" content="Raphael Mugwedeza">
 
     <!-- Link to main CSS file -->
     <link rel="stylesheet" href="assets/styles/main.css">
@@ -86,17 +91,34 @@
             <li>Email: <a href="mailto:rmugwedeza1@gmail.com">rmugwedeza1@gmail.com</a></li>
             <li>Github: <a href="https://github.com/odiousxio2" target="_blank">odiousxio2</a></li>
         </ul>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
     </footer>
 
     <!-- Link to main JavaScript file -->
-    <script src="./assets/scripts/main.js"></script>
+    <script src="./assets/scripts/main.js" defer></script>
 
     <!-- Link to AOS JavaScript file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
 
     <!-- Initialize AOS -->
     <script>
-        AOS.init();
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+        });
     </script>
 </body>
 

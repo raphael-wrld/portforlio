@@ -1,6 +1,13 @@
 // Smooth scroll for navigation links with offset
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('nav a').forEach(anchor => {
+  const navLinks = document.querySelectorAll('nav a')
+
+  // Function to remove 'active' class from all links
+  function removeActiveClasses () {
+    navLinks.forEach(link => link.classList.remove('active'))
+  }
+
+  navLinks.forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
       const targetId = this.getAttribute('href')
@@ -19,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
         top: offsetPosition,
         behavior: 'smooth'
       })
+
+      // Add 'active' class to the clicked link
+      removeActiveClasses()
+      this.classList.add('active')
     })
   })
 
@@ -36,18 +47,31 @@ document.addEventListener('DOMContentLoaded', function () {
         top: offsetPosition,
         behavior: 'smooth'
       })
+
+      // Add 'active' class to the link of the current section
+      document
+        .querySelector(`nav a[href="${currentHash}"]`)
+        .classList.add('active')
     }
   }
 })
 
 // Intersection Observer for animations
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1 // Trigger animation when 10% of the section is visible
+}
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('animate')
+    } else {
+      entry.target.classList.remove('animate') // Remove 'animate' class when not in view
     }
   })
-})
+}, observerOptions)
 
 document.querySelectorAll('section').forEach(section => {
   observer.observe(section)
@@ -55,23 +79,25 @@ document.querySelectorAll('section').forEach(section => {
 
 // Form validation and submission
 const contactForm = document.getElementById('contact-form')
-contactForm.addEventListener('submit', function (e) {
-  e.preventDefault()
-  const name = document.getElementById('name').value.trim()
-  const email = document.getElementById('email').value.trim()
-  const message = document.getElementById('message').value.trim()
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault()
+    const name = document.getElementById('name').value.trim()
+    const email = document.getElementById('email').value.trim()
+    const message = document.getElementById('message').value.trim()
 
-  if (name && email && message) {
-    if (validateEmail(email)) {
-      alert(`Thank you, ${name}! Your message has been sent.`)
-      contactForm.reset()
+    if (name && email && message) {
+      if (validateEmail(email)) {
+        alert(`Thank you, ${name}! Your message has been sent.`)
+        contactForm.reset()
+      } else {
+        alert('Please enter a valid email address.')
+      }
     } else {
-      alert('Please enter a valid email address.')
+      alert('Please fill out all fields.')
     }
-  } else {
-    alert('Please fill out all fields.')
-  }
-})
+  })
+}
 
 // Email validation function
 function validateEmail (email) {
