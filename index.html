@@ -31,23 +31,38 @@
 </head>
 
 <body>
-    <!-- Header section -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-content">
-            <div class="site-icon">
-                <img src="assets/images/icon.svg" alt="Site Icon">
-            </div>
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
             <h1>Raphael Mugwedeza</h1>
             <p>Passionate IT enthusiast aspiring to be a great software developer and programmer.</p>
+            <a href="#about" class="btn-cta">Learn More</a>
         </div>
-    </header>
+    </section>
+    <!-- Header section -->
+<header>
+    <div class="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle" class="switch-label">
+            <span class="switch"></span>
+        </label>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-content">
+        <div class="site-icon">
+            <img src="assets/images/icon.svg" alt="Site Icon">
+        </div>
+        <h1>Raphael Mugwedeza</h1>
+        <p>Passionate IT enthusiast aspiring to be a great software developer and programmer.</p>
+    </div>
+</header>
 
     <!-- Main content section -->
     <main>
@@ -80,6 +95,47 @@
                 </div>
             </div>
         </section>
+<!-- Skills section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill">
+            <i class="fab fa-html5"></i>
+            <label for="html">HTML</label>
+            <div class="progress-bar">
+                <span id="html" style="width: 90%;">90%</span>
+            </div>
+        </div>
+        <div class="skill">
+            <i class="fab fa-css3-alt"></i>
+            <label for="css">CSS</label>
+            <div class="progress-bar">
+                <span id="css" style="width: 80%;">80%</span>
+            </div>
+        </div>
+        <div class="skill">
+            <i class="fab fa-js"></i>
+            <label for="javascript">JavaScript</label>
+            <div class="progress-bar">
+                <span id="javascript" style="width: 75%;">75%</span>
+            </div>
+        </div>
+        <div class="skill">
+            <i class="fab fa-react"></i>
+            <label for="react">React</label>
+            <div class="progress-bar">
+                <span id="react" style="width: 70%;">70%</span>
+            </div>
+        </div>
+        <div class="skill">
+            <i class="fab fa-node-js"></i>
+            <label for="node">Node.js</label>
+            <div class="progress-bar">
+                <span id="node" style="width: 65%;">65%</span>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
 <!-- Footer section -->
@@ -120,6 +176,16 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             AOS.init();
+        });
+    </script>
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        document.getElementById("dark-mode-toggle").addEventListener("change", function () {
+            if (this.checked) {
+                document.documentElement.setAttribute("data-theme", "dark");
+            } else {
+                document.documentElement.removeAttribute("data-theme");
+            }
         });
     </script>
 </body>

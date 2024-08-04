@@ -77,7 +77,7 @@ document.querySelectorAll('section').forEach(section => {
   observer.observe(section)
 })
 
-// Form validation and submission
+// // Form validation and submission
 const contactForm = document.getElementById('contact-form')
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
@@ -99,7 +99,7 @@ if (contactForm) {
   })
 }
 
-// Email validation function
+// // Email validation function
 function validateEmail (email) {
   const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
   return re.test(email)

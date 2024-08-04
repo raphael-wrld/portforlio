@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* CSS Variables for colors */
@@ -18,6 +19,112 @@
     --text-light-color: #f1faee;
 }
 
+/* Dark Mode Toggle Styles */
+.dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* .dark-mode-toggle label {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+} */
+
+/*cnhh*/
+.dark-mode-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.switch-label .switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.switch-label .switch:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.switch-label .switch {
+    background-color: var(--primary-color);
+}
+
+input:checked+.switch-label .switch:before {
+    transform: translateX(26px);
+}
+
+ .dark-mode-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.switch:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.switch {
+    background-color: var(--primary-color);
+}
+
+input:checked+.switch:before {
+    transform: translateX(26px);
+}
+
+/* Dark Mode Styles */
+:root[data-theme="dark"] {
+    --background-color: #1d1d1d;
+    --text-color: #ffffff;
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+}
+
 /* Body Styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -25,6 +132,52 @@ body {
     background-color: var(--background-color);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* Hero Section Styles */
+.hero {
+    /* background: linear-gradient(135deg, #457b9d, #1d3557); */
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    color: var(--text-light-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background 0.3s;
+}
+
+.btn-cta:hover {
+    background: var(--secondary-color);
 }
 
 /* -----------------------------------------------------------------------------
@@ -176,6 +329,50 @@ section p, section ul {
 
 .project-card p {
     color: #666;
+}
+
+/* Skills Section Styles */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.skill label {
+    flex: 1;
+}
+
+.progress-bar {
+    flex: 2;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: var(--primary-color);
+    text-align: center;
+    line-height: 20px;
+    color: var(--text-color);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 /* Footer Styles */
