@@ -410,173 +410,185 @@ section p, section ul {
     display: inline-block;
     margin: 10px;
 }
-    /* Skills Section Styles */
-    .skills-container {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
 
-    .skill {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+/* Skills Section Styles */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    .skill i {
-        font-size: 24px;
-        color: var(--primary-color);
-    }
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-    .skill label {
-        flex: 1;
-    }
+.skill i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
 
-    .progress-bar {
-        flex: 2;
-        height: 20px;
-        background-color: #f3f3f3;
-        border-radius: 10px;
-        overflow: hidden;
-        position: relative;
-    }
+.skill label {
+    flex: 1;
+}
 
-    .progress-bar span {
-        display: block;
-        height: 100%;
-        background-color: var(--primary-color);
-        text-align: center;
-        line-height: 20px;
-        color: var(--text-color);
-        border-radius: 10px;
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
+.progress-bar {
+    flex: 2;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
 
-    /* Footer Styles */
-    footer {
-        background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-        padding: 30px;
-        color: var(--text-light-color);
-        text-align: center;
-        border-radius: 8px;
-        margin-top: 20px;
-    }
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: var(--primary-color);
+    text-align: center;
+    line-height: 20px;
+    color: var(--text-color);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
-    footer h3 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-        border-bottom: 2px solid var(--text-light-color);
-        padding-bottom: 5px;
-    }
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    padding: 30px;
+    color: var(--text-light-color);
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+}
 
-    footer .contact-info {
-        list-style: none;
-        padding: 0;
-        margin-bottom: 20px;
-    }
+footer h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--text-light-color);
+    padding-bottom: 5px;
+}
 
-    footer .contact-info li {
-        margin-bottom: 10px;
-        font-size: 1.1em;
-        display: flex;
-        align-items: center;
-    }
+footer .contact-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
 
-    footer .contact-info li i {
-        margin-right: 10px;
-    }
+footer .contact-info li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
 
-    footer a {
-        color: var(--text-light-color);
-        text-decoration: none;
-    }
+footer .contact-info li i {
+    margin-right: 10px;
+}
 
-    footer a:hover {
-        text-decoration: underline;
-    }
+footer a {
+    color: var(--text-light-color);
+    text-decoration: none;
+}
 
-    /* Form Styles */
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 20px;
-    }
+footer a:hover {
+    text-decoration: underline;
+}
 
-    .form-group {
-        display: flex;
-        flex-direction: column;
-    }
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
 
-    label {
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
 
-    input, textarea {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1em;
-        width: 100%;
-    }
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 
-    button {
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        background: var(--primary-color);
-        color: var(--text-light-color);
-        font-size: 1em;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
 
-    button:hover {
-        background: var(--secondary-color);
-    }
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: var(--text-light-color);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    /* -----------------------------------------------------------------------------
+button:hover {
+    background: var(--secondary-color);
+}
+
+/* -----------------------------------------------------------------------------
  * Responsive Design
  * ---------------------------------------------------------------------------*/
 
-    @media (max-width: 768px) {
-        nav ul {
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        header {
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-        }
-
-        header h1 {
-            font-size: 1.8em;
-        }
-
-        header p {
-            font-size: 0.9em;
-        }
-
-        .projects-container {
-            grid-template-columns: 1fr;
-        }
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    @media (max-width: 600px) {
-        header h1 {
-            font-size: 1.6em;
-        }
-
-        section h2 {
-            font-size: 1.4em;
-        }
-
-        section p, section ul {
-            font-size: 0.9em;
-        }
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
     }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+
+    section p, section ul {
+        font-size: 0.9em;
+    }
+}
+
+.wip {
+    background-image: linear-gradient(to right, #ff9900, #ff9900);
+    background-size: 100% 2px;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    color: #666;
+}
