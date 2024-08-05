@@ -221,8 +221,8 @@
         'todo-app': {
             title: 'To-do App',
             description: 'Organize tasks with this intuitive to-do list app.',
-            githubLink: 'https://github.com/raphael-wrld/todo-app',
-            previewLink: 'https://raphael-wrld.github.io/todo-app/'
+            githubLink: 'https://github.com/raphael-wrld/advanced-todo-app',
+            previewLink: 'https://advanced-todo-app-8c108.web.app/'
         },
         'messaging-app': {
             title: 'Messaging App',
@@ -238,6 +238,12 @@
         }
     };
 
+        // Opens a modal with information about a specific project.
+        // 
+        // Parameters:
+        // - projectKey (string): The key of the project to display in the modal.
+        //
+        // Returns: None.
     function openModal(projectKey) {
         const project = projects[projectKey];
         document.getElementById('modal-title').innerText = project.title;
