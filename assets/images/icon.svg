@@ -1,34 +1,13 @@
-<!-- SVG icon for the web page -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" xml:space="preserve" width="64"
-  height="64">
-  <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#457b9d;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1d3557;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <!-- Circle with gradient -->
-  <g id="icon">
-    <circle cx="32" cy="32" r="32" fill="url(#grad1)"/>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="45" fill="#457b9d" stroke="#2b6f89" stroke-width="5" />
 
-    <!-- Code icon -->
-    <g id="code" transform="translate(10, 22)">
-      <path fill="#f1faee" d="M20.6,14.6c-0.8-0.8-2.1-0.8-2.8,0l-7,7c-0.8,0.8-0.8,2.1,0,2.8l7,7c0.8,0.8,2.1,0.8,2.8,0
-        c0.8-0.8,0.8-2.1,0-2.8L16.8,24l3.8-3.8C21.4,16.7,21.4,15.4,20.6,14.6z"/>
-      <path fill="#f1faee" d="M34.2,21.6l-7-7c-0.8-0.8-2.1-0.8-2.8,0s-0.8,2.1,0,2.8L28.2,24l-3.8,3.8c-0.8,0.8-0.8,2.1,0,2.8
-        c0.8,0.8,2.1,0.8,2.8,0l7-7C35,23.8,35,22.4,34.2,21.6z"/>
-    </g>
+  <!-- Curly Braces -->
+  <path d="M35 30 Q30 40 35 50 Q30 60 35 70" stroke="#FFFFFF" stroke-width="4" fill="none"
+    stroke-linecap="round" />
+  <path d="M65 30 Q70 40 65 50 Q70 60 65 70" stroke="#FFFFFF" stroke-width="4" fill="none"
+    stroke-linecap="round" />
 
-    <!-- Person icon -->
-    <g id="person" transform="translate(18, 12)">
-      <circle fill="#f1faee" cx="14" cy="8" r="8"/>
-      <path fill="#f1faee" d="M14,18c-6.6,0-12,5.4-12,12v4c0,1.1,0.9,2,2,2h20c1.1,0,2-0.9,2-2v-4C26,23.4,20.6,18,14,18z"/>
-    </g>
-
-    <!-- Star icon -->
-    <g id="star" transform="translate(24, 34)">
-      <polygon fill="#f1faee" points="6.5,0 8.2,4.4 13,4.4 9.2,7.1 10.8,11.5 6.5,8.8 2.2,11.5 3.8,7.1 0,4.4 4.8,4.4 "/>
-    </g>
-  </g>
+  <!-- Code Slash -->
+  <line x1="45" y1="40" x2="55" y2="60" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
 </svg>
