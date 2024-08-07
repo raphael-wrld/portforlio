@@ -394,21 +394,22 @@ button:hover {
 }
 
 
-/* .button {
+.button {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     background: var(--primary-color);
     color: var(--text-light-color);
     font-size: 1em;
-    text-decoration: nonea
-    transition: background-color 0.3s;
     cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+    text-decoration: none;
 }
 
 .button:hover {
     background: var(--secondary-color);
-} */
+}
 
 .preview-btn {
     background: #28a745;
