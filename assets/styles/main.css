@@ -148,7 +148,7 @@ body {
     position: relative;
 }
 
-.hero::after {
+.hero::before {
     content: "";
     position: absolute;
     top: 0;
@@ -156,9 +156,7 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    /* Optional: dark overlay */
-    backdrop-filter: blur(2px);
-    /* Reduce the blur effect */
+    z-index: 1;
 }
 
 .hero-content {
@@ -176,16 +174,15 @@ body {
     z-index: 1;
 }
 
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #fff;
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: #fff;
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--text-light-color);
 }
 
 .btn-cta {
@@ -264,11 +261,11 @@ header p {
     color: var(--text-light-color);
 }
 
-.site-icon img {
+/* .site-icon img {
     width: 40px;
     height: 40px;
     margin: 10px auto;
-}
+} */
 
 /* -----------------------------------------------------------------------------
  * Main Content Styles
@@ -322,11 +319,11 @@ section p, section ul {
     gap: 20px;
 }
 
-.project-card {
+/* .project-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Ensures the button is at the bottom */
+     Ensures the button is at the bottom 
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -335,13 +332,36 @@ section p, section ul {
     text-align: center;
     position: relative;
     overflow: hidden;
-    /* Ensure no overflow of content */
+     Ensure no overflow of content 
+} */
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
+/* .project-card:hover {
     background: var(--text-light-color);
     color: var(--secondary-color);
     transform: scale(1.05);
+} */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .project-card h3 {
@@ -393,6 +413,12 @@ button:hover {
     background: var(--secondary-color);
 }
 
+/* Focus State Styles */
+button:focus,
+a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
 
 .button {
     padding: 10px 15px;
@@ -539,13 +565,19 @@ footer .contact-info {
 
 footer .contact-info li {
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1rem;
     display: flex;
     align-items: center;
 }
 
 footer .contact-info li i {
     margin-right: 10px;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.contact-info li:hover i {
+    color: var(--secondary-color);
 }
 
 footer a {
@@ -575,12 +607,20 @@ label {
     margin-bottom: 5px;
 }
 
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
+.contact-form input,
+.contact-form textarea {
     width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
 }
 
 
@@ -636,4 +676,8 @@ input, textarea {
     border-bottom: 1px solid #000000;
     font-weight: bold;
     color: #666;
+}
+
+.dev {
+    background-color: rgb(28, 138, 37);
 }
