@@ -1,0 +1,5 @@
+fix dark-theme toggle colours
+fix modal when dark mode is toggled on
+add lazy loading
+reduce loading time
+fix bug where some images were loading slow
