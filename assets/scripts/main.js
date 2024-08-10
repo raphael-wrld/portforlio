@@ -1,3 +1,4 @@
+// ./assets/scripts/main.js
 // Smooth scroll for navigation links with offset
 document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('nav a')
