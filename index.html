@@ -3,10 +3,9 @@
 <html lang="en">
 
 <head>
-  <!-- Meta tags for responsive design and character encoding -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Meta tags for SEO -->
+
   <meta name="description"
     content="Raphael Mugwedeza's personal portfolio showcasing projects and skills as an aspiring software developer and programmer.">
   <meta name="keywords" content="Raphael Mugwedeza, portfolio, software developer, programmer, projects">
@@ -27,7 +26,6 @@
   <!-- Link to site icon -->
   <link rel="icon" href="assets/images/icon.svg" type="image/svg+xml">
 
-  <!-- Page title -->
   <title>Raphael Mugwedeza - Portfolio</title>
 </head>
 
@@ -58,9 +56,6 @@
       </ul>
     </nav>
     <div class="header-content">
-      <!-- <div class="site-icon">
-        <img src="assets/images/icon.svg" alt="Site Icon">
-      </div> -->
       <h1>Raphael Mugwedeza</h1>
       <p>Passionate IT enthusiast aspiring to be a great software developer and programmer.</p>
     </div>
@@ -80,14 +75,14 @@
       <div class="projects-container">
         <!-- Project cards -->
         <div class="project-card" data-aos="fade-up">
-          <span class="badge">Early Project(2020)</span> <!-- Added badge -->
+          <span class="badge">Early Project(2020)</span>
           <img src="assets/images/project-1.png" loading="lazy" alt="Netflix Clone Project">
           <h3>Netflix Home-Page Clone</h3>
           <p>As part of my Pirple HTML & CSS course, my final project was to recreate Neflix's home page.</p>
           <button onclick="openModal('pirple-final-project')">Learn More</button>
         </div>
         <div class="project-card" data-aos="fade-up">
-          <span class="badge">Early Project(2020)</span> <!-- Added badge -->
+          <span class="badge">Early Project(2020)</span>
           <img src="assets/images/project-2.png" loading="lazy" alt="School Web Design Assignment (OBHS)">
           <h3>School Web Design Assignment (OBHS)</h3>
           <p>After barely learning the basics of HTML we were given an assignment to create a basic website and this is
@@ -95,14 +90,14 @@
           <button onclick="openModal('web-assignment')">Learn More</button>
         </div>
         <div class="project-card" data-aos="fade-up">
-          <span class="badge">Early Project(2020)</span> <!-- Added badge -->
+          <span class="badge">Early Project(2020)</span>
           <img src="assets/images/project-3.png" loading="lazy" alt="Transparent Login Form">
           <h3>Transparent Login Form</h3>
           <p>Login Form I created for fun</p>
           <button onclick="openModal('transparent-login-form')">Learn More</button>
         </div>
         <div class="project-card" data-aos="fade-up">
-          <span class="badge dev">In development</span> <!-- Added badge -->
+          <span class="badge dev">In development</span>
           <img src="assets/images/project-5.png" loading="lazy" alt="To-do App">
           <h3>To-do App</h3>
           <p>Organize tasks with this intuitive to-do list app.</p>
@@ -115,14 +110,14 @@
           <button onclick="openModal('portfolio-webpage')">Learn More</button>
         </div>
         <div class="project-card" data-aos="fade-up">
-          <span class="badge dev">In development</span> <!-- Added badge -->
+          <span class="badge dev">In development</span>
           <img src="assets/images/project-6.png" loading="lazy" alt="Music Player App">
           <h3>Music Player App</h3>
           <p>A sleek music player with playlist management and controls.</p>
           <button onclick="openModal('music-player')">Learn More</button>
         </div>
         <div class="project-card" data-aos="fade-up">
-          <span class="badge dev">In development</span> <!-- Added badge -->
+          <span class="badge dev">In development</span>
           <img src="assets/images/project-7.png" loading="lazy" alt="Messaging App">
           <h3>Messaging App</h3>
           <p>Real-time messaging app with user authentication.</p>
@@ -286,13 +281,6 @@
         previewLink: 'https://raphael-wrld.github.io/Transparent-Login-Form-2020-/',
       }
     };
-
-    // Opens a modal with information about a specific project.
-    // 
-    // Parameters:
-    // - projectKey (string): The key of the project to display in the modal.
-    //
-    // Returns: None.
     function openModal(projectKey) {
       const project = projects[projectKey];
       document.getElementById('modal-title').innerText = project.title;

@@ -1,5 +1,4 @@
 /* ./assets/styles/main.css */
-/* Reset some basic elements */
 * {
     margin: 0;
     padding: 0;
@@ -331,19 +330,15 @@ section ul {
 .badge {
     position: absolute;
     top: 15px;
-
     right: 15px;
     background: var(--secondary-color);
-
     color: #fff;
     padding: 5px 10px;
     border-radius: 12px;
-
     font-size: 0.8em;
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transform: translateY(-50%);
-
 }
 
 /* Button Styles */
