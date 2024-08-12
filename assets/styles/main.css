@@ -375,7 +375,6 @@ label {
     font-size: 1rem;
 }
 
-
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: var(--primary-color);
@@ -384,6 +383,49 @@ label {
 
 /* End of Footer Style */
 
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal .button {
+    display: inline-block;
+    margin: 10px;
+}
+/* End of Modal Styles */
 
 /* Dark Mode Toggle Styles */
 .dark-mode-toggle {
@@ -515,66 +557,6 @@ a:focus {
 .button:hover {
     background: var(--secondary-color);
 }
-
-.preview-btn {
-    background: #28a745;
-}
-
-.preview-btn:hover {
-    background: #218838;
-}
-
-.github-btn {
-    background: #6c757d;
-}
-
-.github-btn:hover {
-    background: #5a6268;
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: #000;
-    text-decoration: none;
-}
-
-.modal .button {
-    display: inline-block;
-    margin: 10px;
-}
-
 
 
 /* Responsive Design */
