@@ -339,9 +339,11 @@ section ul {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transform: translateY(-50%);
 }
+
 .dev {
     background-color: rgb(17, 128, 0);
 }
+
 /* Button Styles */
 button {
     padding: 10px 15px;
@@ -573,3 +575,11 @@ label {
     border-color: var(--primary-color);
     outline: none;
 }
+
+.wip {
+    background-image: linear-gradient(to right, #ff9900, #ff9900);
+    background-size: 100% 2px;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    padding: 5px;
+    border-bottom: 1px solid #000000;}
