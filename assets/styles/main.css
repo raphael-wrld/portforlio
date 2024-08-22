@@ -7,11 +7,44 @@
 
 /* CSS Variables for colors */
 :root {
+    /*
+    --secondary-color: #1d3557;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --text-light-color: #f1faee;
+    --accent-color: #e63946;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-color: #a8dadc;
+    --focus-color: #457b9d; */
     --primary-color: #457b9d;
     --secondary-color: #1d3557;
     --background-color: #f4f4f4;
     --text-color: #333;
     --text-light-color: #f1faee;
+    --accent-color: #e63946;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-color: #a8dadc;
+    --focus-color: #457b9d;
+}
+
+/* Dark Mode Styles */
+:root[data-theme="dark-mode"] {
+    /* --background-color: #121212;
+    --text-color: #e0e0e0;
+    /* --primary-color: #457b9d; */
+    --secondary-color: #1d3557;
+    --text-light-color: #f1faee; */
+    --secondary-color: #1d3557;
+    --background-color: #2a2a2a;
+    --text-color: #e0e0e0;
+    --text-light-color: #ffffff;
+    --accent-color: #ff6f61;
+    --border-color: #444;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --hover-color: #a8dadc;
+    --focus-color: #457b9d;
 }
 
 /* Dark Mode Toggle Styles */
@@ -102,15 +135,6 @@ input:checked+.switch {
 
 input:checked+.switch:before {
     transform: translateX(26px);
-}
-
-/* Dark Mode Styles */
-:root[data-theme="dark-mode"] {
-    --background-color: #121212;
-    --text-color: #e0e0e0;
-    --primary-color: #457b9d;
-    --secondary-color: #1d3557;
-    --text-light-color: #f1faee;
 }
 
 body.dark-mode header {
