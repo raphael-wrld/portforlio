@@ -105,11 +105,38 @@ input:checked+.switch:before {
 }
 
 /* Dark Mode Styles */
-:root[data-theme="dark"] {
-    --background-color: #1d1d1d;
-    --text-color: #ffffff;
-    --primary-color: #bb86fc;
-    --secondary-color: #03dac6;
+:root[data-theme="dark-mode"] {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #457b9d;
+    --secondary-color: #1d3557;
+    --text-light-color: #f1faee;
+}
+
+body.dark-mode header {
+    background-color: #1d2b3a;
+    /* A slightly lighter dark background for header */
+}
+
+body.dark-mode .project-card {
+    background-color: #2a2a2a;
+    /* Dark background for project cards */
+}
+
+body.dark-mode .project-card:hover {
+    background-color: #333333;
+    /* Slightly lighter on hover */
+}
+
+body.dark-mode .modal-content {
+    background-color: #2b2b2b;
+    /* Darker background for modal content */
+}
+
+body.dark-mode section {
+    background: linear-gradient(135deg, #1e1e1e, var(--background-color));
+    /* background-color: #1e1e1e; */
+    /* Darker background for sections */
 }
 
 /* Body Styles */
@@ -251,7 +278,7 @@ main {
 
 
 section {
-    background: linear-gradient(135deg, #fff, var(--background-color));
+    background: var(--background-color);
     padding: 30px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -293,7 +320,7 @@ section ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: var(--background-color);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -450,6 +477,7 @@ a:focus {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: var(--background-color);
 }
 
 .skill {
@@ -470,12 +498,20 @@ a:focus {
 .progress-bar {
     flex: 2;
     height: 20px;
-    background-color: #f3f3f3;
+    background-color: var(--background-color);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
 }
-
+body.dark-mode .progress-bar{
+    background-color: var(--background-color);
+}
+body.dark-mode footer input,textarea{
+    background-color: var(--background-color);
+}
+footer input,textarea{
+    background-color: var(--background-color);
+}
 .progress-bar span {
     display: block;
     height: 100%;

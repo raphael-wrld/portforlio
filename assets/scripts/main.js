@@ -30,10 +30,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Add 'active' class to the clicked link
       removeActiveClasses()
-      this.classList.add('active')
+      this.classList.add('active');
+
+      navLinks.forEach(link => link.setAttribute('aria-expanded', 'false'))
+this.setAttribute('aria-expanded', 'true')
+
     })
   })
-
+navLinks.forEach(link => {
+  link.setAttribute(
+    'aria-expanded',
+    link.classList.contains('active') ? 'true' : 'false'
+  )
+})
   // Scroll to the correct position when the page loads or reloads
   const currentHash = window.location.hash
   if (currentHash) {
