@@ -60,4 +60,24 @@
     section ul {
         font-size: 0.9em;
     }
+
+    .dark-mode-toggle {
+        top: 5px;
+        right: 5px;
+    }
+
+    .switch-label {
+        width: 40px;
+        height: 24px;
+    }
+
+    .switch:before {
+        height: 18px;
+        width: 18px;
+        transform: translateX(16px);
+    }
+
+    input:checked+.switch-label .switch:before {
+        transform: translateX(16px);
+    }
 }
