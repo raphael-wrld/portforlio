@@ -35,7 +35,7 @@
     --text-color: #e0e0e0;
     /* --primary-color: #457b9d; */
     --secondary-color: #1d3557;
-    --text-light-color: #f1faee; 
+    --text-light-color: #f1faee;
     --secondary-color: #1d3557;
     --background-color: #2a2a2a;
     --text-color: #e0e0e0;
@@ -67,9 +67,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--background-color);
     transition: 0.4s;
     border-radius: 34px;
+    color: var(--primary-color);
 }
 
 .switch-label .switch:before {
@@ -79,13 +80,13 @@
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: var(--primary-color);
     transition: 0.4s;
     border-radius: 50%;
 }
 
 input:checked+.switch-label .switch {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
 }
 
 input:checked+.switch-label .switch:before {
@@ -112,9 +113,10 @@ input:checked+.switch-label .switch:before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--background-color);
     transition: 0.4s;
     border-radius: 34px;
+    color: var(--primary-color);
 }
 
 .switch:before {
@@ -239,7 +241,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #457b9d, #1d3557);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     padding: 10px 20px;
     color: #fff;
     text-align: center;
