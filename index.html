@@ -246,16 +246,11 @@
   <!-- Dark Mode Toggle Script -->
   <script>
 
-    // Function to apply dark mode based on localStorage
+    // Applies the dark mode based on the stored preference in localStorage
     function applyDarkMode() {
-      const darkModeStatus = localStorage.getItem('dark-mode');
-      if (darkModeStatus === 'enabled') {
-        document.documentElement.setAttribute('data-theme', 'dark-mode');
-        document.getElementById('dark-mode-toggle').checked = true;
-      } else {
-        document.documentElement.removeAttribute('data-theme');
-        document.getElementById('dark-mode-toggle').checked = false;
-      }
+      const isDarkModeEnabled = localStorage.getItem('dark-mode') === 'enabled';
+      document.documentElement.setAttribute('data-theme', isDarkModeEnabled ? 'dark-mode' : '');
+      document.getElementById('dark-mode-toggle').checked = isDarkModeEnabled;
     }
 
     // Function to toggle dark mode and save preference to localStorage

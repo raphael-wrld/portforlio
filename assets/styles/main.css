@@ -35,7 +35,7 @@
     --text-color: #e0e0e0;
     /* --primary-color: #457b9d; */
     --secondary-color: #1d3557;
-    --text-light-color: #f1faee;
+    --text-light-color: #f1faee; 
     --secondary-color: #1d3557;
     --background-color: #2a2a2a;
     --text-color: #e0e0e0;
@@ -231,7 +231,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-size: 1.2em;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
 
 .btn-cta:hover {
