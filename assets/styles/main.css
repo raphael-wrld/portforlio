@@ -439,11 +439,11 @@ a:focus {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--background-color);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -451,10 +451,11 @@ a:focus {
     max-width: 600px;
     border-radius: 8px;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .close-button {
-    color: #aaa;
+    color: var(--text-color);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -463,13 +464,24 @@ a:focus {
 
 .close-button:hover,
 .close-button:focus {
-    color: #000;
+    color: var(--primary-color);
     text-decoration: none;
+    cursor: pointer;
 }
 
 .modal .button {
     display: inline-block;
     margin: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal .button:hover {
+    background-color: var(--secondary-color);
 }
 
 /* Skills Section Styles */
@@ -503,15 +515,19 @@ a:focus {
     overflow: hidden;
     position: relative;
 }
-body.dark-mode .progress-bar{
+
+body.dark-mode .progress-bar {
     background-color: var(--background-color);
 }
-body.dark-mode footer input,textarea{
+
+body.dark-mode footer input, textarea {
     background-color: var(--background-color);
 }
-footer input,textarea{
+
+footer input, textarea {
     background-color: var(--background-color);
 }
+
 .progress-bar span {
     display: block;
     height: 100%;

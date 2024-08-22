@@ -163,24 +163,33 @@ const projects = {
   }
 }
 
-// Define a function to open a modal for a specific project
+// Function to open a modal for a specific project
 function openModal (projectKey) {
   // Get the project information from the projects object
   const project = projects[projectKey]
 
-  // Update the modal with the project information
-  document.getElementById('modal-title').innerText = project.title
-  document.getElementById('modal-description').innerText = project.description
-  document.getElementById('modal-github-link').href = project.githubLink
-  document.getElementById('modal-preview-link').href = project.previewLink
+  // Check if the project exists
+  if (project) {
+    // Update the modal with the project information
+    document.getElementById('modal-title').innerText = project.title
+    document.getElementById('modal-description').innerText = project.description
+    document.getElementById('modal-github-link').href = project.githubLink
+    document.getElementById('modal-preview-link').href = project.previewLink
 
-  // Show the modal
-  document.getElementById('project-modal').style.display = 'block'
+    // Show the modal
+    document.getElementById('project-modal').style.display = 'block'
+  }
 }
 
-// Define a function to close the modal
+// Function to close the modal
 function closeModal () {
   // Hide the modal
   document.getElementById('project-modal').style.display = 'none'
 }
 
+// Add an event listener to close the modal when clicking outside of it
+window.onclick = function (event) {
+  if (event.target == document.getElementById('project-modal')) {
+    closeModal()
+  }
+}
