@@ -84,9 +84,38 @@ document.querySelectorAll('section').forEach(section => {
   observer.observe(section)
 })
 
-// JavaScript for toggling the hamburger menu
+// Function to toggle the menu
+function toggleMenu () {
+  document.querySelector('nav.main-nav ul').classList.toggle('active')
+}
+
+// Function to close the menu
+function closeMenu () {
+  document.querySelector('nav.main-nav ul').classList.remove('active')
+}
+
+// Toggle the menu when the hamburger button is clicked
 document
   .querySelector('.hamburger-menu')
-  .addEventListener('click', function () {
-    document.querySelector('nav.main-nav ul').classList.toggle('active')
+  .addEventListener('click', function (event) {
+    event.stopPropagation() // Prevent the event from bubbling up to the document
+    toggleMenu()
   })
+
+// Close the menu when a link inside the menu is clicked
+document.querySelectorAll('nav.main-nav ul a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    closeMenu()
+  })
+})
+
+// Close the menu when clicking outside of the menu
+document.addEventListener('click', function (event) {
+  const menu = document.querySelector('nav.main-nav ul')
+  const hamburgerMenu = document.querySelector('.hamburger-menu')
+
+  // Check if the click was outside of the menu and the hamburger button
+  if (!menu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+    closeMenu()
+  }
+})
