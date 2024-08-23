@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Get the height of the header
       const headerOffset = document.querySelector('header').offsetHeight
-
       // Calculate the position to scroll to
       const elementPosition =
         targetElement.getBoundingClientRect().top + window.scrollY
