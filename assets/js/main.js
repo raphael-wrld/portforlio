@@ -85,4 +85,10 @@ document.querySelectorAll('section').forEach(section => {
   observer.observe(section)
 })
 
+// JavaScript for toggling the hamburger menu
+document
+  .querySelector('.hamburger-menu')
+  .addEventListener('click', function () {
+    document.querySelector('nav.main-nav ul').classList.toggle('active')
+  })
 
