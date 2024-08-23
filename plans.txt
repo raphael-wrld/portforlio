@@ -1,8 +1,8 @@
-fix dark-theme toggle colours
+fix dark-theme toggle colours✔
 
-fix modal when dark mode is toggled on
+fix modal when dark mode is toggled on✔
 
-add lazy loading
+add lazy loading✔
 
 reduce loading time
 
@@ -13,9 +13,9 @@ Accessibility:meaningful alt attributes for better accessibility ||
     Consider using ARIA landmarks (<nav>, <main>, etc.) and roles to improve accessibility further.
 
 consider saving the user’s dark mode preference in localStorage 
-    so that the site remembers their preference even after they navigate away or refresh the page.
+    so that the site remembers their preference even after they navigate away or refresh the page.✔
 
-To improve usability, consider closing the modal when the user clicks outside of it, in addition to using the close button.
+To improve usability, consider closing the modal when the user clicks outside of it, in addition to using the close button.✔
 
 Consider optimizing images using tools like ImageOptim or TinyPNG. This will help reduce load times.
 Add a preload link for critical resources like fonts to improve performance: <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">

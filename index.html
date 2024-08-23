@@ -8,7 +8,7 @@
 
   <meta name="description"
     content="Raphael Mugwedeza's personal portfolio showcasing projects and skills as an aspiring software developer and programmer.">
-  <meta name="keywords" content="Raphael Mugwedeza, portfolio, software developer, programmer, projects">
+  <meta name="keywords" content="Raphael Mugwedeza, portfolio, software developer,web developer,HTML, CSS, JavaScript, programmer, projects">
   <meta name="author" content="Raphael Mugwedeza">
 
   <!-- Link to CSS files -->
@@ -245,35 +245,13 @@
       AOS.init();
     });
   </script>
-  <!-- Dark Mode Toggle Script -->
-  <script>
 
-    // Applies the dark mode based on the stored preference in localStorage
-    function applyDarkMode() {
-      const isDarkModeEnabled = localStorage.getItem('dark-mode') === 'enabled';
-      document.documentElement.setAttribute('data-theme', isDarkModeEnabled ? 'dark-mode' : '');
-      document.getElementById('dark-mode-toggle').checked = isDarkModeEnabled;
-    }
+  <!-- Link to Dark Mode JavaScript file -->
+  <script src="./assets/js/dark-mode.js"></script>
 
-    // Function to toggle dark mode and save preference to localStorage
-    function toggleDarkMode() {
-      const isDarkMode = document.getElementById('dark-mode-toggle').checked;
-      if (isDarkMode) {
-        document.documentElement.setAttribute('data-theme', 'dark-mode');
-        localStorage.setItem('dark-mode', 'enabled');
-      } else {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('dark-mode', 'disabled');
-      }
-    }
+  <!-- Link to Modal JavaScript file -->
+  <script src="./assets/js/modal.js"></script>
 
-    // Initialize dark mode on page load
-    applyDarkMode();
-
-    // Add event listener to the dark mode toggle checkbox
-    document.getElementById('dark-mode-toggle').addEventListener('change', toggleDarkMode);
-
-  </script>
 </body>
 
 </html>
