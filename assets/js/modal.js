@@ -16,7 +16,7 @@ const projects = {
   'todo-app': {
     title: 'To-do App',
     description: 'Organize tasks with this intuitive to-do list app.',
-    githubLink: 'https://github.com/raphael-wrld/advanced-todo-app',
+    githubLink: 'https://github.com/raphael-wrld/todo-app',
     previewLink: 'https://advanced-todo-app-8c108.web.app/'
   },
   'messaging-app': {
