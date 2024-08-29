@@ -142,7 +142,7 @@
     .switch:before {
         height: 18px;
         width: 18px;
-        transform: translateX(16px);
+        /* transform: translateX(16px); */
     }
 
     input:checked+.switch-label .switch:before {
